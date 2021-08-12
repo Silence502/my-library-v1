@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ parent() }} | Page test{% endblock %}
+
+{% block body %}
+    <h2>Page test</h2>
+
+    <h3>Auteurs</h3>
+    <ul>
+        {% for author in authors %}
+            <li>
+                {{ author.name }}
+            </li>
+        {% endfor %}
+    </ul>
+    <br>
+    <hr><br>
+    <h3>Illustrateurs</h3>
+    <ul>
+        {% for illustrator in illustrators %}
+            <li>
+                {{ illustrator.name }}
+            </li>
+        {% endfor %}
+    </ul>
+    <br>
+    <hr><br>
+    <h3>Editeurs</h3>
+    <ul>
+        {% for publisher in publishers %}
+            <li>
+                {{ publisher.name }}
+            </li>
+        {% endfor %}
+    </ul>
+    <br>
+    <hr><br>
+    <h3>Livres</h3>
+    <ul>
+        {% for book in books %}
+            <li>
+                {{ book.originalTitle }}
+                {% if book.kanaTitle %} - {{ book.kanaTitle }}{% endif %}
+                {% if book.romajiTitle %} - {{ book.romajititle }}{% endif %}
+                de {{ book.author.name }},
+                dessins de
+                {% for illustrator in book.illustrator %}
+                    {{ illustrator.name }}
+                {% endfor %}
+            </li>
+        {% endfor %}
+    </ul>
+
+
+
+{% endblock %}

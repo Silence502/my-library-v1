@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ parent() }} | Création d'un illustrateur{% endblock %}
+
+{% block body %}
+    <h2>Ajouter un illustrateur</h2>
+
+    {{ form_start(illustratorForm) }}
+    {{ form_row(illustratorForm.alias) }}
+    {{ form_row(illustratorForm.name)}}
+    {{ form_row(illustratorForm.birthday) }}
+    {{ form_row(illustratorForm.deathday) }}
+    {{ form_row(illustratorForm.nationality) }}
+    <button type="submit" class="btn">Ajouter</button>
+    {{ form_end(illustratorForm) }}
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ parent() }} | Création d'un illustrateur{% endblock %}
+
+{% block body %}
+    <h2>Ajouter un livre</h2>
+    {{ form_start(bookForm) }}
+    {{ form_row(bookForm.originalTitle) }}
+    {{ form_row(bookForm.frenchTitle) }}
+    {{ form_row(bookForm.romajiTitle) }}
+    {{ form_row(bookForm.kanaTitle) }}
+    {{ form_row(bookForm.author) }}
+    {{ form_row(bookForm.illustrator) }}
+    {{ form_row(bookForm.publisher) }}
+    {{ form_row(bookForm.genre) }}
+    {{ form_row(bookForm.category) }}
+    {{ form_row(bookForm.nbPages) }}
+    {{ form_row(bookForm.serie) }}
+    {{ form_row(bookForm.tome) }}
+    {{ form_row(bookForm.isbn) }}
+    {{ form_row(bookForm.price) }}
+    {{ form_row(bookForm.country) }}
+    {{ form_row(bookForm.summary) }}
+    {{ form_row(bookForm.releaseDate) }}
+    <button type="submit" class="btn">Ajouter</button>
+    {{ form_end(bookForm) }}
+{% endblock %}
