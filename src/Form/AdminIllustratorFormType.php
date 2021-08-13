@@ -44,7 +44,8 @@ class AdminIllustratorFormType extends AbstractType
                     'Etats-Unis' => 'Etats-Unis',
                     'Espagne' => 'Espagne',
                     'Japon' => 'Japon',
-                ]
+                ],
+                'placeholder' => '-- Nationalité --',
             ])
         ;
     }

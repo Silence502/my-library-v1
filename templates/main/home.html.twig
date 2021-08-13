@@ -3,7 +3,8 @@
 {% block title %}{{ parent() }} | Accueil{% endblock %}
 
 {% block body %}
-    <h2>Home page</h2>
+    <h2>Accueil</h2>
+    <hr>
 
     {% if app.user %}
         <h3>Bonjour {{ app.user.nickname }} !</h3>
