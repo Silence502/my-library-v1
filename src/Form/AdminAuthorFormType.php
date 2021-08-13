@@ -18,20 +18,32 @@ class AdminAuthorFormType extends AbstractType
             ->add('alias', TextType::class, [
                 'label' => 'Alias ',
                 'required' => false,
+                'attr' =>[
+                    'class' => 'test',
+                ],
             ])
             ->add('name', TextType::class, [
                 'label' => 'Nom ',
                 'required' => true,
+                'attr' =>[
+                    'class' => 'test',
+                ],
             ])
             ->add('birthday', DateType::class, [
                 'label' => 'Date de naissance ',
                 'required' => false,
                 'widget' => 'single_text',
+                'attr' =>[
+                    'class' => 'test',
+                ],
             ])
             ->add('deathday', DateType::class, [
                 'label' => 'Date de décés ',
                 'required' => false,
                 'widget' => 'single_text',
+                'attr' =>[
+                    'class' => 'test',
+                ],
             ])
             ->add('nationality', ChoiceType::class, [
                 'label' => 'Nationalité ',
@@ -44,7 +56,11 @@ class AdminAuthorFormType extends AbstractType
                     'Etats-Unis' => 'Etats-Unis',
                     'Espagne' => 'Espagne',
                     'Japon' => 'Japon',
-                ]
+                ],
+                'placeholder' => '-- Nationalité --',
+                'attr' =>[
+                    'class' => 'test',
+                ],
             ])
         ;
     }

@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ parent() }} | Ajouter une saga{% endblock %}
+
+{% block body %}
+    <h2>Ajouter une saga</h2>
+    <hr>
+    {{ form_start(serieForm) }}
+    {{ form_row(serieForm.title) }}
+    {{ form_row(serieForm.status) }}
+    <button type="submit" class="btn">Ajouter</button>
+    {{ form_end(serieForm) }}
+{% endblock %}

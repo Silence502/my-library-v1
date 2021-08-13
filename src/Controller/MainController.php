@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Genre;
 use App\Repository\AuthorRepository;
 use App\Repository\BookRepository;
 use App\Repository\IllustratorRepository;
@@ -41,6 +42,11 @@ class MainController extends AbstractController
         $illustrators = $illustratorRepository->findAll();
         $publishers = $publisherRepository->findAll();
         $books = $bookRepository->findAll();
+
+//        $genre = new Genre();
+//        $genre->setName('Fantastique');
+//        $entityManager->persist($genre);
+//        $entityManager->flush();
 
         return $this->render('main/test.html.twig', [
             'authors' => $authors,

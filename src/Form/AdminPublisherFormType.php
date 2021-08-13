@@ -29,7 +29,8 @@ class AdminPublisherFormType extends AbstractType
                     'Etats-Unis' => 'Etats-Unis',
                     'Espagne' => 'Espagne',
                     'Japon' => 'Japon',
-                ]
+                ],
+                'placeholder' => '-- Pays --',
             ]);
     }
 

@@ -4,7 +4,7 @@
 
 {% block body %}
     <h2>Page test</h2>
-
+    <hr>
     <h3>Auteurs</h3>
     <ul>
         {% for author in authors %}
@@ -42,11 +42,16 @@
                 {{ book.originalTitle }}
                 {% if book.kanaTitle %} - {{ book.kanaTitle }}{% endif %}
                 {% if book.romajiTitle %} - {{ book.romajititle }}{% endif %}
+                {% if book.frenchTitle %} - <em>({{ book.frenchTitle }})</em>{% endif %}
                 de {{ book.author.name }},
                 dessins de
                 {% for illustrator in book.illustrator %}
-                    {{ illustrator.name }}
+                    {{ illustrator.name }},
                 {% endfor %}
+                de la saga
+                {% if book.serie %}
+                    {{ book.serie.title }}
+                {% endif %}
             </li>
         {% endfor %}
     </ul>

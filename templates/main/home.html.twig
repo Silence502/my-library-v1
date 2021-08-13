@@ -3,5 +3,12 @@
 {% block title %}{{ parent() }} | Accueil{% endblock %}
 
 {% block body %}
-    <h1>Home page</h1>
+    <h2>Accueil</h2>
+    <hr>
+
+    {% if app.user %}
+        <h3>Bonjour {{ app.user.nickname }} !</h3>
+    {% else %}
+        <h3>Non connecté</h3>
+    {% endif %}
 {% endblock %}
