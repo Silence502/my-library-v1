@@ -1,0 +1,13 @@
+<div class="style-main-bar">
+    <h1>My Library</h1>
+    <cite>
+        {% if app.user %}
+            Connecté : {{ app.user.nickname }}
+            {% if is_granted('ROLE_ADMIN') %}
+                (admin)
+            {% endif %}
+        {% else %}
+            Non connecté
+        {% endif %}
+    </cite>
+</div>

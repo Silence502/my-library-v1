@@ -7,10 +7,20 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{% block title %}My Library{% endblock %}</title>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/normalize.css') }}">
 </head>
 <body>
-<header>{% include 'nav/main-nav.html.twig' %}</header>
-<main>{% block body %}{% endblock %}</main>
+<header>
+    {% include'nav/header-bar.html.twig' %}
+</header>
+<section>
+    {% include 'nav/main-nav.html.twig' %}
+</section>
+<main>
+    <section class="style-body">
+        {% block body %}{% endblock %}
+    </section>
+</main>
 <footer></footer>
 
 
