@@ -3,11 +3,11 @@ ul {
     flex-direction: column;
     align-items: start;
     padding-left: 0;
+    margin-right: 10px;
+    margin-left: 10px;
 }
 
 nav a, .style-nav-li {
-    margin-right: 10px;
-    margin-left: 10px;
     text-decoration: none;
     list-style-type: none;
     color: #ffffff;
@@ -17,10 +17,12 @@ nav a, .style-nav-li {
 
 .active {
     color: #b4b9e0;
+    font-weight: bold;
 }
 
 a:hover {
     color: #b4b9e0;
+    font-weight: bold;
 }
 
 .style-main-nav{
@@ -59,4 +61,12 @@ a:hover {
 body {
     background: rgb(84,82,125);
     background: linear-gradient(0deg, rgba(84,82,125,1) 0%, rgba(219,219,219,1) 100%);
+}
+
+.disconnection a {
+    color: #B0413E;
+}
+
+.connection a {
+    color: chartreuse;
 }

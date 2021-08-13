@@ -16,15 +16,22 @@
                 <li class="style-nav-li">
                     <a {% if app.request.get('_route') == 'publisher_admin_create' %} class="active"{% endif %}
                             href="{{ path('publisher_admin_create') }}">Ajouter un éditeur</a></li>
-                <li class="style-nav-li"><a {% if app.request.get('_route') == 'test' %} class="active"{% endif %}
-                            href="#">Ajouter une saga</a></li>
+                <li class="style-nav-li">
+                    <a {% if app.request.get('_route') == 'serie_admin_create' %} class="active"{% endif %}
+                            href="{{ path('serie_admin_create') }}">Ajouter une saga</a></li>
                 <li class="style-nav-li"><a {% if app.request.get('_route') == 'test' %} class="active"{% endif %}
                             href="{{ path('test') }}">Page test</a></li>
-                <li class="style-nav-li"><a href="{{ path('app_logout') }}">Déconnexion</a></li>
+                <li class="style-nav-li disconnection"><a href="{{ path('app_logout') }}">Déconnexion</a></li>
             {% else %}
-                <li class="style-nav-li"><a href="{{ path('app_login') }}">Connexion</a></li>
+                <li class="style-nav-li connection"><a href="{{ path('app_login') }}">Connexion</a></li>
                 <li class="style-nav-li"><a href="{{ path('app_register') }}">Inscription</a></li>
             {% endif %}
         </ul>
     </nav>
+    <p style="color: #999999;
+                position: absolute;
+                bottom: 0;
+                margin-left: 10px">
+        version: 0.1.2 --
+    </p>
 </div>
